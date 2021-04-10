@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-public class StudentRegistrationFormTests {
+public class StudentRegistrationFormTests extends TestBase {
     @BeforeAll
     static void setup() {
         Configuration.startMaximized = true;
@@ -83,6 +83,7 @@ public class StudentRegistrationFormTests {
                         text(state),
                         text(city));
             });
+//            step("Close form ", () -> $("#closeLargeModal").click());
         });
     }
 }
