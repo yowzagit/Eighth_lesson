@@ -16,10 +16,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 public class StudentRegistrationFormTests extends TestBase {
-    @BeforeAll
-    static void setup() {
-        Configuration.startMaximized = true;
-    }
+
 
     @Test
     void successfulFillFormTest() {
