@@ -4,11 +4,13 @@ import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.nio.charset.StandardCharsets;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.openqa.selenium.logging.LogType.BROWSER;
+
 
 public class AttachmentHelper {
 
@@ -25,6 +27,17 @@ public class AttachmentHelper {
     @Attachment(value = "{attachName}", type = "image/png")
     public static byte[] attachScreenshot(String attachName) {
         return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
+    }
+
+    @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
+    public static String attachVideo() {
+        return "<html><body><video widht='100%' height='100%' controls autoplay> <source scr='"
+                + "https://selenoid.autotest.cloud/video" + getSessionId() + ".mp4"
+                + "' type='video/mp4'></video></body></html>";
+    }
+
+    public static String getSessionId() {
+        return ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
     }
 
     public static String getConsoleLogs() {
