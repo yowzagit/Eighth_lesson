@@ -31,7 +31,7 @@ public class AttachmentHelper {
 
     @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
     public static String attachVideo() {
-        return "<html><body><video widht='100%' height='100%' controls autoplay> <source scr='"
+        return "<html><body><video wight='100%' height='100%' controls autoplay> <source scr='"
                 + "https://selenoid.autotest.cloud/video" + getSessionId() + ".mp4"
                 + "' type='video/mp4'></video></body></html>";
     }
