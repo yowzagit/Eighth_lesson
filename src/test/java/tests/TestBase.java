@@ -34,7 +34,6 @@ public class TestBase {
 //        Configuration.browser = "chrome";
 //        Configuration.startMaximized = true;
 //    }
-
     @AfterEach
     void afterEach() {
         attachScreenshot("Last screenshot");
