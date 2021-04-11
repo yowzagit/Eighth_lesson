@@ -1,10 +1,8 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
 import com.github.javafaker.Faker;
 import com.github.javafaker.service.FakeValuesService;
 import com.github.javafaker.service.RandomService;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.Locale;
@@ -79,7 +77,6 @@ public class StudentRegistrationFormTests extends TestBase {
                         text(state),
                         text(city));
             });
-//            step("Close form ", () -> $("#closeLargeModal").click());
         });
     }
 }
