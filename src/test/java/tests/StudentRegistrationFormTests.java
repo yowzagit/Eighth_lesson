@@ -17,7 +17,6 @@ import static io.qameta.allure.Allure.step;
 
 public class StudentRegistrationFormTests extends TestBase {
 
-
     @Test
     void successfulFillFormTest() {
         Faker faker = new Faker();
