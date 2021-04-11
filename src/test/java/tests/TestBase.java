@@ -18,7 +18,7 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
 
-        Configuration.remote = "https://user1:1234@136.243.89.21:4445//wd/hub";
+        Configuration.remote = "https://user1:1234@136.243.89.21:4445/wd/hub";
     }
 
     @AfterEach
