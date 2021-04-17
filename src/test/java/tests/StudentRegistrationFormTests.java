@@ -61,22 +61,22 @@ public class StudentRegistrationFormTests extends TestBase {
             step("Upload capture", () -> $("#uploadPicture").uploadFromClasspath("per.png"));
             step("Set hobbies", () -> $("[for='hobbies-checkbox-2']").click());
             step("Submit form", () -> $("#submit").click());
-
-            step("Verify student form ", () -> {
-                $(".table").shouldHave(text(firstName),
-                        text(lastName),
-                        text(email),
-                        text(sex),
-                        text(number),
-                        text(birthMonth),
-                        text(birthYear),
-                        text(subjects),
-                        text(hobbies),
-                        text(address),
-                        text("per.png"),
-                        text(state),
-                        text(city));
-            });
         });
+        step("Verify student form ", () -> {
+            $(".table").shouldHave(text(firstName),
+                    text(lastName),
+                    text(email),
+                    text(sex),
+                    text(number),
+                    text(birthMonth),
+                    text(birthYear),
+                    text(subjects),
+                    text(hobbies),
+                    text(address),
+                    text("per.png"),
+                    text(state),
+                    text(city));
+        });
+
     }
 }
