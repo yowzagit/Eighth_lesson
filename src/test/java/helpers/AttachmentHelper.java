@@ -33,7 +33,7 @@ public class AttachmentHelper {
     public static String attachVideo() {
         return "<html><body><video width='100%' height='100%' controls autoplay><source srс='"
                 + "https://selenoid.autotests.cloud/video/" + getSessionId() + ".mp4"
-                + "'type='video/mp4'></video></body></html>";
+                + "' type='video/mp4'></video></body></html>";
     }
 
 
